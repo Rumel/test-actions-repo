@@ -18,7 +18,6 @@ jobs:
       - name: Output README
         run: |
           cat ${{ github.workspace }}/README.md
-          - uses: ruby/setup-ruby@v1
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.2 # Not needed with a .ruby-version file
