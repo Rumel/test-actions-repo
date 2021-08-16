@@ -9,15 +9,21 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v2
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          repository: rumel/funf-reborn
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: env
-        run: env
+      - name: env | sort
+        run: env | sort
+      - name: pwd
+        run: pwd
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: ls -lRa .
-        run: ls -lRa .
-      - name: ls -lRa ${{ github.workspace }}
-        run: ls -lRa ${{ github.workspace }}
+      - name: ls -lR .
+        run: ls -lR .
+      - name: ls -lR ${{ github.workspace }}
+        run: ls -lR ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
