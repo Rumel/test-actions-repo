@@ -29,6 +29,6 @@ jobs:
         run: ls -lR ${{ github.workspace }}
       - name: ls /home/runner/work/test-actions-repo
         run: ls /home/runner/work/test-actions-repo
-      - name: ls -R /home/runner
-        run: ls -R /home/runner
+      - name: ls /home/runner
+        run: ls /home/runner
       - run: echo "🍏 This job's status is ${{ job.status }}."
