@@ -31,4 +31,6 @@ jobs:
         run: ls /home/runner/work/test-actions-repo
       - name: ls /home/runner/work
         run: ls /home/runner/work
+      - name: ls -R /home/runner/work/_actions
+        run: ls -R /home/runner/work/_actions
       - run: echo "🍏 This job's status is ${{ job.status }}."
