@@ -34,7 +34,7 @@ jobs:
       - name: ls -R /home/runner/work/_actions
         run: ls -R /home/runner/work/_actions
       - name: Test docker action
-        uses: actions/hello-world-docker-action@v1
+        uses: actions/hello-world-docker-action@v2
         with:
           who-to-greet: 'Dalton'
       - run: echo "🍏 This job's status is ${{ job.status }}."
