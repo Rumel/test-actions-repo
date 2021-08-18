@@ -33,6 +33,10 @@ jobs:
         run: ls /home/runner/work
       - name: ls -R /home/runner/work/_actions
         run: ls -R /home/runner/work/_actions
+      - name: Set an environment variable
+        run: LEMUR=test
+      - name: Set an environment variable with export
+        run: export LEMUR_EXPORT=test
       - name: Test docker action
         uses: rumel/hello-action@v2
         with:
