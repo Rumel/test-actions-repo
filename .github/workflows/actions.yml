@@ -47,4 +47,6 @@ jobs:
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
         run: LEMUR_VAR="$TEST_SECRET" && echo "$LEMUR_VAR"
+      - name: ls $HOME/secrets
+        run: ls $HOME/secrets
       - run: echo "🍏 This job's status is ${{ job.status }}."
