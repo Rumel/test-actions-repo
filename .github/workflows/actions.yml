@@ -43,6 +43,16 @@ jobs:
           who-to-greet: 'Dalton'
         env:
           LEMUR_VAR: LEMUR
+      - name: NodeAction
+        id: node-action
+        uses: rumel/hello-node-action@v2
+        with:
+          who-to-greet: "Dalton"
+      - name: NodeAction2
+        id: node-action-2
+        uses: rumel/hello-node-action@v2
+        with:
+          who-to-greet: "Rumel"
       - name: Print secret
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
